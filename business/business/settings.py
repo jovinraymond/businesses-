@@ -132,4 +132,10 @@ LOGOUT_REDIRECT_URL=  "login"  # Redirect to home after login
 AUTH_USER_MODEL = 'base.CustomUser'
 
 # Email Configuration (for development, use console backend; for production, configure SMTP)
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'jbussiuganda@gmail.com'  # Replace with your Gmail address
+EMAIL_HOST_PASSWORD = 'ivfkooonclvqzkup'  # Replace with the App Password, without spaces
+DEFAULT_FROM_EMAIL = 'jbussiuganda@gmail.com'  # Same as EMAIL_HOST_USER
